@@ -52,4 +52,16 @@ app.patch('/student/:id', async (req, res) => {
   }
 });
 
+//Teste
+app.put('/student', async (req, res) => {
+  const student = new studentModel(req.body);
+
+  try {
+    await student.save();
+    res.send(student);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
 export { app as studentRouter };
