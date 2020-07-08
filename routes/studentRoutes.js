@@ -52,7 +52,6 @@ app.patch('/student/:id', async (req, res) => {
   }
 });
 
-//Teste
 app.put('/student', async (req, res) => {
   const student = new studentModel(req.body);
 
